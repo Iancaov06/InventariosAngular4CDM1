@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
+import { ListadoComponent } from './categoria/listado/listado.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BienvenidoComponent } from './bienvenido/bienvenido.component';
     HeaderComponent,
     FooterComponent,
     CategoriaComponent,
-    BienvenidoComponent
+    BienvenidoComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,
