@@ -13,7 +13,7 @@ export class CategoriaService {
   private httpHeaders = new HttpHeaders({'ContentType':'application/json'})
 
   listadoCategorias() : Observable<Categoria[]>{
-    return this.http.get(`${this.endPoint}/get-all`).pipe(map((response) => response as Categoria[]));
+    return this.http.get<Categoria[]>(`${this.endPoint}/get-all`).pipe(map((response) => response as Categoria[]));
   }
 
   eliminarCategoria(id : number) : Observable<Categoria> {
@@ -24,10 +24,7 @@ export class CategoriaService {
   }
 
   leerCategoria(id : number) : Observable<Categoria> {
-    return this.http.get<Categoria> (
-      `${this.endPoint}/get-one/${id}`,
-      {headers : this.httpHeaders}
-    )
+    return this.http.get<Categoria>(`${this.endPoint}/get-one/${id}`).pipe(map((response) => response as Categoria));
   }
 
   crearCategoria(categoria : Categoria) : Observable<Categoria> {

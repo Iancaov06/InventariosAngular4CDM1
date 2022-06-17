@@ -16,6 +16,7 @@
                     class="form-control" 
                     name="nombre" 
                     required
+                    [value]="listadoDeCategorias.nombreCategoria"
                     [(ngModel)]="categoria.nombreCategoria">
                 </div>
 
@@ -25,17 +26,17 @@
                     class="form-control" 
                     name="descripcion" 
                     required
+                    [value]="listadoDeCategorias.descripcionCategoria"
                     [(ngModel)]="categoria.descripcionCategoria">
                 </div>
 
                 <div class="mb-3">
                     <button class="btn btn-outline-primary form-control"
-                    (click)="almacenarCategoria(categoria)">
+                    (click)="editarCategoria(categoria)">
                         Ingresar producto
                     </button>
                 </div>
             </form>
         </div>
-
     </div>
 </div>

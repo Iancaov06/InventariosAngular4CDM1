@@ -14,9 +14,11 @@ export class ListadoComponent implements OnInit {
   listadoDeCategorias : Categoria[] = [];
 
   constructor(private servicio : CategoriaService) { }
-
+  
   ngOnInit(): void {
-    this.servicio.listadoCategorias().subscribe( (categorias) => this.listadoDeCategorias = categorias);
+    this.servicio.listadoCategorias().subscribe( (categorias) => {this.listadoDeCategorias = categorias
+      console.log(this.listadoDeCategorias)
+    });    
   }
 
   eliminar (categoria : Categoria) : void {

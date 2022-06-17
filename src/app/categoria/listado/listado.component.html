@@ -26,8 +26,8 @@
                             <td>{{categoria.nombreCategoria}}</td>
                             <td>{{categoria.descripcionCategoria}}</td>
                             <td>
-                                <button type="button" name="actualizar" routerLink="['/categorias',5]" class="btn btn-outline-success btn-sm">
-                                    <i class="fa-solid fa-pen"></i> Actualizar
+                                <button type="button" name="actualizar" [routerLink]="['/editarCategoria',categoria.idCategoria]" class="btn btn-outline-success btn-sm">
+                                    <i class="fa-solid fa-pen"></i> Actualizar {{categoria.idCategoria}}
                                 </button>
                             </td>
                             <td>
